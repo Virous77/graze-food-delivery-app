@@ -1,0 +1,132 @@
+.head {
+  font-size: 1.3rem;
+}
+
+.shopForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroImage {
+  width: 200px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+.heroImage p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.deleteImg {
+  position: absolute;
+  right: 3%;
+  bottom: 5%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: red;
+}
+
+.heroImageSec {
+  width: 100%;
+  height: 100%;
+}
+
+.heroImageSec img {
+  width: 100%;
+  height: 100%;
+}
+
+.addShopImg input {
+  width: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+}
+
+.shopCamera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.7rem;
+  z-index: 1;
+}
+
+.addShopImg span {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 1;
+  font-size: 0.65rem;
+}
+
+.subShopWrap {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.shopInput {
+  width: 100%;
+}
+
+.shopInput input {
+  padding: 12px 5px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 0.9rem;
+}
+
+.shopBoolean {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.shopInput textarea {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.submitShop button {
+  background-color: #282c3f;
+  color: white;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.submitShop button:hover {
+  background-color: #30354e;
+}
+
+.activeVeg {
+  background-color: #30354e;
+  color: white;
+  border: 2px solid silver;
+  font-size: 0.9rem;
+  border-radius: 2px;
+}
+
+.notActiveVeg {
+  color: #30354e;
+  border: 2px solid silver;
+  font-size: 0.9rem;
+  border-radius: 2px;
+}

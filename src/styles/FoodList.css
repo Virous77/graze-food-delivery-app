@@ -1,0 +1,79 @@
+.foodListBar {
+  display: grid;
+  grid-template-columns: 250px 1.5fr 1fr;
+  gap: 4rem;
+}
+
+.foodHomeList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.foodRight {
+  position: relative;
+}
+
+.foodRight img {
+  width: 120px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.foodCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.foodLine {
+  height: 1px;
+  background-color: gray;
+}
+
+.foodleft h3 {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.foodleft p {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.addFood {
+  position: absolute;
+  bottom: -7%;
+  left: 10%;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(5, 216, 5);
+  cursor: pointer;
+}
+
+.incDecBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0.7rem;
+}
+.notFounds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFounds img {
+  width: 50%;
+  height: 250px;
+}

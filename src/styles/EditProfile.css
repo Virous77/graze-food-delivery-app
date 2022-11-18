@@ -1,0 +1,146 @@
+.editProfileBar {
+  background-color: white;
+  height: 100vh;
+  width: 600px;
+  padding: 2rem 3rem;
+}
+
+.closeIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.close {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.close p {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.showHover {
+  display: block;
+  background-color: black;
+  color: white;
+  font-size: 0.6rem;
+  text-transform: capitalize;
+  padding: 2px 4px;
+  position: absolute;
+  bottom: -40%;
+  right: 60%;
+  border: 1px solid rgb(153, 153, 153);
+}
+
+.userProfileData {
+  margin-top: 3rem;
+}
+
+.userProfileData img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 120px 5px rgba(0, 0, 0, 0.3);
+}
+
+.userProfileData p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.userOpacity {
+  opacity: 0.7;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.editButton span {
+  border: 2px solid #393e46;
+  width: fit-content;
+  padding: 5px 30px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.editButton span:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.changeImage {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.changeImage p {
+  border: 2px solid orange;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #282c3f;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.camera {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+
+.camera input {
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  z-index: 2;
+  opacity: 0;
+}
+
+.cameraIcon {
+  font-size: 2.5rem;
+  position: absolute;
+  left: 10%;
+}
+
+.userInput {
+  margin-top: 2rem;
+}
+
+.userInput input {
+  padding: 12px 5px;
+  font-size: 1.2rem;
+}
+
+.deleteBar {
+  position: relative;
+}
+
+.deleteIcon {
+  color: red;
+  position: absolute;
+  bottom: 23%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.camera span {
+  margin-top: 0.4rem;
+}
+
+.yesBio {
+  text-transform: capitalize;
+}

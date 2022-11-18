@@ -1,0 +1,31 @@
+.errorBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.errorCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+
+.errorCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.errorBar span {
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+  display: block;
+}
+
+.errorCard button {
+  padding: 8px 2rem;
+  background-color: #393e46;
+  color: white;
+}

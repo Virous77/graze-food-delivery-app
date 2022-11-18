@@ -1,0 +1,21 @@
+.Loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.loaderIcon {
+  color: #393e46;
+  font-size: 3rem;
+  animation: App-logo-spin infinite 5s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

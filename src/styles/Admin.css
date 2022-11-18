@@ -1,0 +1,78 @@
+.adminBar {
+  padding-top: 5rem;
+  background-color: #37718e;
+}
+
+.adminInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.adminInfo img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100px;
+}
+
+.adminInfo h1 {
+  font-size: 1.5rem;
+}
+
+.adminInfo p {
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+  opacity: 0.8;
+}
+
+.adminHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.editAdmin {
+  border: 2px solid white;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.editAdmin:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.editProfile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 121;
+}
+
+.AdminLinks {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 300px 1fr;
+  padding: 1rem;
+  padding-left: 0;
+  gap: 2rem;
+}
+
+.adminNav {
+  background-color: whitesmoke;
+  padding-left: 20px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.adminNav a {
+  padding: 1rem;
+}
+
+.adminContent {
+  padding: 1rem;
+}

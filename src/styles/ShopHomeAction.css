@@ -1,0 +1,52 @@
+.shopActionBar {
+  position: absolute;
+  bottom: -5%;
+  display: flex;
+  gap: 3rem;
+}
+
+.search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.7rem;
+  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.search input {
+  background-color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  padding-left: 5px;
+}
+
+.shopBookmark {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.bookmarkIcon,
+.searchClose {
+  cursor: pointer;
+}
+
+.searchClose {
+  opacity: 0;
+}
+
+.bookmarkIconF {
+  cursor: pointer;
+  color: red;
+}
+
+.showSearch {
+  opacity: 1;
+}

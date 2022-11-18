@@ -1,0 +1,190 @@
+.homeBar {
+  padding-top: 5rem;
+}
+
+.homeContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  position: relative;
+}
+
+.contentList {
+  padding: 1rem 1.2rem;
+  position: relative;
+  box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding-bottom: 3rem;
+}
+
+.contentList:hover .hide {
+  display: grid;
+}
+
+.contentImage img {
+  width: 100%;
+  height: 180px;
+}
+
+.veg {
+  color: green;
+  font-size: 1.1rem;
+}
+
+.nonVeg {
+  color: red;
+  font-size: 1.1rem;
+}
+
+.shopInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  color: #282c3f;
+}
+
+.shopInfo h1 {
+  text-transform: capitalize;
+  padding-top: 0.7rem;
+  padding-bottom: 0.3rem;
+}
+
+.shopInfo span {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.shopInfo p {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cool {
+  border: 1px solid black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 17;
+  top: 0;
+  left: 0;
+}
+
+.contentLine {
+  width: 85%;
+  margin: auto;
+  background-color: gray;
+  height: 1px;
+  margin-top: 1rem;
+}
+
+.quick {
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.quick button {
+  background-color: transparent;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #282c3f;
+  color: white;
+}
+
+.overViewPage {
+  box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  position: absolute;
+  top: -2%;
+  width: 420px;
+  left: 0;
+  z-index: 30;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.wrapOverView {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.wrapOverView h1 {
+  text-align: center;
+  letter-spacing: 3px;
+  padding-bottom: 0.3rem;
+}
+
+.quickFoodBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.quickImg {
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.quickFoodBar img {
+  width: 120px;
+  height: 82px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: ease-in-out 0.4s;
+}
+
+.quickFoodBar img:hover {
+  scale: 1.03;
+}
+
+.quickFoodBar p {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  padding: 0.1rem 0.2rem;
+}
+
+.quickFoodList {
+  border-radius: 5px;
+  box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+
+.quickList p {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.flowerIcon {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.quickContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hide {
+  display: none;
+}
