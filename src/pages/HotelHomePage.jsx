@@ -99,6 +99,8 @@ const HotelHomePage = () => {
             food.foodName?.toLowerCase()?.includes(search?.toLowerCase())
           )}
           type={shopData?.shopTypeVeg}
+          shopData={shopData}
+          shopId={id}
         />
       </Card>
     </section>

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/CartItem.css";
 import { BiFoodTag } from "react-icons/bi";
 import empty from "../images/emptycart.svg";
+import { Link } from "react-router-dom";
 
 const CartItem = () => {
   const cartItem = useSelector(selectCartItem);
@@ -62,6 +63,9 @@ const CartItem = () => {
                           foodName: item.foodName,
                           category: item.category,
                           foodPrice: item.foodPrice,
+                          shopName: item.shopName,
+                          shopLocation: item.shopLocation,
+                          shopImage: item.shopImage,
                         };
 
                         decCart(cartData);
@@ -86,6 +90,9 @@ const CartItem = () => {
                           foodName: item.foodName,
                           category: item.category,
                           foodPrice: item.foodPrice,
+                          shopName: item.shopName,
+                          shopLocation: item.shopLocation,
+                          shopImage: item.shopImage,
                         };
 
                         incCart(cartData);
@@ -115,7 +122,9 @@ const CartItem = () => {
           </div>
 
           <div className="checkOutButton">
-            <button>Checkout</button>
+            <Link to="/cart">
+              <button>Checkout</button>
+            </Link>
           </div>
         </div>
       ) : (

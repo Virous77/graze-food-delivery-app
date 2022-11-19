@@ -1,0 +1,45 @@
+.thankYouBar {
+  position: fixed;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  z-index: 300;
+  border-radius: 10px;
+}
+
+.thankYouBar img {
+  width: 12rem;
+}
+
+.thankImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thankImg p {
+  font-size: 0.9rem;
+  padding-bottom: 3rem;
+}
+
+.thankYouAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.thankYouAction button {
+  background-color: #282c3f;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.thankYouAction button:hover {
+  background-color: #31364d;
+}

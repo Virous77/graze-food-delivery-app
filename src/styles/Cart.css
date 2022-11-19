@@ -1,0 +1,131 @@
+.cartBar {
+  padding-top: 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+}
+
+.cartAddedBar {
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
+.cartShopBar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cartShopBar img {
+  width: 4rem;
+  height: 4em;
+  object-fit: cover;
+}
+
+.shopCartName h4 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.shopCartName span {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  opacity: 0.8;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.cartLine {
+  background-color: black;
+  border-radius: 2px;
+  width: 40%;
+  height: 2px;
+  margin-top: 1.1rem;
+}
+
+.billBar {
+  padding-top: 0.8rem;
+}
+
+.billHead {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.cartTotal {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 100;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+
+.cartTotal p {
+  text-transform: capitalize;
+}
+
+.subTotalLine {
+  width: 95%;
+  height: 0.5px;
+  background-color: gray;
+  margin-top: 1rem;
+}
+
+.subTotalLineTwo {
+  width: 95%;
+  height: 1.5px;
+  background-color: black;
+  margin-top: 1rem;
+}
+
+.cartTotalTwo {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+
+.cartTotalTwo p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cartTotalTwo span {
+  font-weight: bold;
+}
+
+.wcartEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.wcartEmpty img {
+  width: 400px;
+  height: 220px;
+}
+
+.wcartEmpty h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.wcartEmpty span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.wcartEmpty button {
+  color: white;
+  background-color: #282c3f;
+  margin-top: 2rem;
+  padding: 15px 30px;
+}

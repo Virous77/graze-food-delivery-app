@@ -1,0 +1,44 @@
+.checkHotelBar {
+  position: fixed;
+  width: 530px;
+  background-color: whitesmoke;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.4);
+  color: #282c3f;
+  border-radius: 10px;
+}
+
+.checkHotelBar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.checkHotelBar p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkHotelAction {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.first {
+  width: 100%;
+  background-color: white;
+  border: 2px solid rgb(2, 219, 2);
+  padding: 12px 0;
+}
+
+.second {
+  width: 100%;
+  background-color: rgb(2, 219, 2);
+  padding: 14px 0;
+  color: white;
+}

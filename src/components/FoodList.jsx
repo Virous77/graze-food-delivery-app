@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiFoodTag } from "react-icons/bi";
 import "../styles/FoodList.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,18 +6,33 @@ import { ADD_TO_CART, DEC_TO_CART, selectCartItem } from "../store/cartSlice";
 import { useAuthContext } from "../store/authContext";
 import CartItem from "./CartItem";
 import notFounds from "../images/notfounds.svg";
+import CheckHotel from "./CheckHotel";
 
-const FoodList = ({ food, type }) => {
+const FoodList = ({ food, type, shopData, shopId: sId }) => {
   const dispatch = useDispatch();
   const { user } = useAuthContext();
   const cartItemTotalIem = useSelector(selectCartItem);
+
+  const [checkHotels, setCheckHotel] = useState(false);
+  const [tempDataC, setTempDataC] = useState("");
 
   const cartItem = cartItemTotalIem?.filter(
     (item) => item.orderUserId === user?.uid
   );
 
   const addToCart = (e) => {
-    dispatch(ADD_TO_CART(e));
+    const checkHotel = cartItem.find((hotel) => hotel.shopId === sId);
+
+    if (cartItem.length === 0) {
+      dispatch(ADD_TO_CART(e));
+      return;
+    }
+
+    if (!checkHotel) {
+      setCheckHotel(true);
+    } else {
+      dispatch(ADD_TO_CART(e));
+    }
   };
 
   const decCart = (e) => {
@@ -61,6 +76,9 @@ const FoodList = ({ food, type }) => {
                                 ? item?.offerFoodPrice
                                 : item?.foodPrice,
                               shopId: item.shopId,
+                              shopName: shopData.shopName,
+                              shopImage: shopData.shopImage,
+                              shopLocation: shopData.shopLocation,
                             };
 
                             decCart(cartData);
@@ -88,6 +106,9 @@ const FoodList = ({ food, type }) => {
                                 ? item?.offerFoodPrice
                                 : item?.foodPrice,
                               shopId: item.shopId,
+                              shopName: shopData.shopName,
+                              shopImage: shopData.shopImage,
+                              shopLocation: shopData.shopLocation,
                             };
 
                             incCart(cartData);
@@ -109,9 +130,13 @@ const FoodList = ({ food, type }) => {
                               ? item?.offerFoodPrice
                               : item?.foodPrice,
                             shopId: item.shopId,
+                            shopName: shopData.shopName,
+                            shopImage: shopData.shopImage,
+                            shopLocation: shopData.shopLocation,
                           };
 
                           addToCart(cartData);
+                          setTempDataC(cartData);
                         }}
                       >
                         Add
@@ -120,8 +145,15 @@ const FoodList = ({ food, type }) => {
                   </div>
                 </div>
               </div>
-
               <div className="foodLine"></div>
+              {checkHotels && (
+                <CheckHotel
+                  setCheckHotel={setCheckHotel}
+                  item={item}
+                  shopData={shopData}
+                  tempDataC={tempDataC}
+                />
+              )}
             </div>
           ))}
         </div>
