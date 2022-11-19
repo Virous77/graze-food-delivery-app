@@ -7,9 +7,7 @@ import { useAuthContext } from "../store/authContext";
 import { selectCartItem } from "../store/cartSlice";
 import CheckoutForm from "./CheckoutForm";
 
-const stripePromise = loadStripe(
-  "pk_test_51M5nbOSE5hXahb5la2SpRGTJDHZSIDHWmuc9wytBWBBMLGLVTlVYfYRGVbcI757NZJIYEcaaNTmlhNJXOL4OLowN004WPSUJYl"
-);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const CheckoutPayment = ({ tempAdd, setThankYou }) => {
   const [clientSecret, setClientSecret] = useState("");
