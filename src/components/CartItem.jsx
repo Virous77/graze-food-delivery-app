@@ -5,12 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/CartItem.css";
 import { BiFoodTag } from "react-icons/bi";
 import empty from "../images/emptycart.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CartItem = () => {
   const cartItem = useSelector(selectCartItem);
   const { user } = useAuthContext();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const currentUserCart = cartItem.filter(
     (item) => item.orderUserId === user.uid
@@ -29,6 +30,15 @@ const CartItem = () => {
 
   const incCart = (e) => {
     dispatch(ADD_TO_CART(e));
+  };
+
+  const validate = () => {
+    if (!user.isLoggedIn) {
+      navigate("/login");
+      return;
+    } else {
+      navigate("/cart");
+    }
   };
 
   return (
@@ -122,9 +132,7 @@ const CartItem = () => {
           </div>
 
           <div className="checkOutButton">
-            <Link to="/cart">
-              <button>Checkout</button>
-            </Link>
+            <button onClick={validate}>Checkout</button>
           </div>
         </div>
       ) : (

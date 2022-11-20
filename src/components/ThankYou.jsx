@@ -29,7 +29,7 @@ const ThankYou = ({ setThankYou }) => {
             </button>
           </Link>
 
-          <Link to="/profile">
+          <Link to="/profile/order-history">
             <button
               onClick={() => {
                 setThankYou(false);

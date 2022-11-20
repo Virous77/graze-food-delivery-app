@@ -130,6 +130,7 @@ export const AdminContextProvider = ({ children }) => {
       offer: offer,
       shopId: uniqueShop[0]?.id,
       shopUserUid: uniqueShop[0]?.shopUserUid,
+      shopName: uniqueShop[0]?.shopName,
       createdAt: serverTimestamp(),
       foodImage: imageAsset,
     };

@@ -14,11 +14,13 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase/firebase.config";
 import useFetchBookmark from "../hooks/useFetchBookmark";
+import { useNavigate } from "react-router-dom";
 
 const ShopHomeAction = ({ search, setSearch, shop, shopId: sId }) => {
   const { user } = useAuthContext();
   const { data } = useFetchBookmark(user.uid, "bookmark");
   const uniqueBookmark = data?.find((shop) => shop.shopId === sId);
+  const navigate = useNavigate();
 
   const saveBookMark = async (e) => {
     if (uniqueBookmark) {
@@ -41,6 +43,13 @@ const ShopHomeAction = ({ search, setSearch, shop, shopId: sId }) => {
       await addDoc(collection(db, "bookmark"), tempData);
     } catch (error) {
       toast.error("Something went wrong, Try again!");
+    }
+  };
+
+  const validate = () => {
+    if (!user.isLoggedIn) {
+      navigate("/login");
+      return;
     }
   };
 
@@ -68,7 +77,9 @@ const ShopHomeAction = ({ search, setSearch, shop, shopId: sId }) => {
         <div className="shopBookmark">
           <FaRegHeart
             className="bookmarkIcon"
-            onClick={() => saveBookMark(shop)}
+            onClick={() => {
+              user.isLoggedIn ? saveBookMark(shop) : validate();
+            }}
           />
           Favourite
         </div>

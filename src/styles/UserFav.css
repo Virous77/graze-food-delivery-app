@@ -1,0 +1,23 @@
+.userBookmarkBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.userBookmarkBar img {
+  transition: ease-in-out 0.4s;
+}
+
+.userBookmarkBar img:hover {
+  scale: 1.05;
+}
+
+.stop {
+  overflow: hidden;
+}
+
+.removes {
+  margin-top: 1rem;
+  text-align: end;
+  color: rgb(255, 176, 30);
+}

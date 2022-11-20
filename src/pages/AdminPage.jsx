@@ -58,7 +58,7 @@ const AdminPage = () => {
         <div className="AdminLinks">
           <div className="adminNav">
             <NavLink
-              to="/admin/"
+              to="/admin/dashboard"
               className="navLink"
               style={({ isActive }) => (isActive ? active : notActive)}
             >
@@ -95,7 +95,7 @@ const AdminPage = () => {
           </div>
           <div className="adminContent">
             <Routes>
-              <Route index element={<AdminDashboard />} />
+              <Route path="dashboard" element={<AdminDashboard />} />
               <Route path="add-shop" element={<AddNewFoodPage />} />
               <Route path="add-food" element={<AddFoodPage />} />
               <Route path="view-food" element={<ViewAllFoodData />} />

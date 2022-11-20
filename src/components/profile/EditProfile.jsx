@@ -7,6 +7,7 @@ import { useAuthContext } from "../../store/authContext";
 
 const EditProfile = ({ setShowEdit }) => {
   const [actives, setActive] = useState(false);
+  const [focus, setFocus] = useState(false);
 
   const {
     user,
@@ -105,8 +106,9 @@ const EditProfile = ({ setShowEdit }) => {
             <input
               type="text"
               placeholder="Bio"
-              value={bio || userData.bio}
+              value={focus ? bio : userData?.bio}
               onChange={(e) => setBio(e.target.value)}
+              onFocus={() => setFocus(true)}
             />
           </div>
         ) : (

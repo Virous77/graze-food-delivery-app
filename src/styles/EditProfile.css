@@ -55,6 +55,7 @@
 .userProfileData p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .userOpacity {

@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="navLinks">
           {user.email === process.env.REACT_APP_ADMIN_ID && (
             <NavLink
-              to="admin"
+              to="/admin/dashboard"
               className="navLink"
               style={({ isActive }) => (isActive ? active : notActive)}
             >
@@ -54,7 +54,7 @@ const Navbar = () => {
           )}
 
           <NavLink
-            to="search"
+            to="/search"
             className="navLink"
             style={({ isActive }) => (isActive ? active : notActive)}
           >
@@ -82,7 +82,7 @@ const Navbar = () => {
             </NavLink>
           ) : (
             <NavLink
-              to="/profile"
+              to="/profile/order-history"
               className="navLink"
               style={({ isActive }) => (isActive ? active : notActive)}
             >

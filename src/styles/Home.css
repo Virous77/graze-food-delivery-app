@@ -14,7 +14,7 @@
   position: relative;
   box-shadow: 2px 4px 15px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .contentList:hover .hide {

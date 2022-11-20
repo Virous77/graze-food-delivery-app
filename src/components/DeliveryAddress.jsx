@@ -25,8 +25,6 @@ const DeliveryAddress = ({ setThankYou }) => {
     getCollection,
   } = useFetchAddress(user.uid, "userAddress");
 
-  console.log(tempAdd);
-
   const initialState = {
     address: "",
     flat: "",

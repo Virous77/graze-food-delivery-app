@@ -1,8 +1,20 @@
 import React from "react";
 import { MdOutlineShareLocation, MdWork } from "react-icons/md";
 import { BiHomeSmile } from "react-icons/bi";
+import { useAuthContext } from "../store/authContext";
+import { useNavigate } from "react-router-dom";
 
 const Address = ({ setShowNewAdd, data, goPaymentAction }) => {
+  const { user } = useAuthContext();
+  const navigate = useNavigate();
+
+  const validate = () => {
+    if (!user.isLoggedIn) {
+      navigate("/login");
+      return;
+    }
+  };
+
   return (
     <div className="userAddBar">
       <div className="userNewAdd">
@@ -20,7 +32,14 @@ const Address = ({ setShowNewAdd, data, goPaymentAction }) => {
           </div>
 
           <div className="six">
-            <button onClick={() => setShowNewAdd(true)}>ADD NEW</button>
+            <button
+              onClick={() => {
+                setShowNewAdd(true);
+                validate();
+              }}
+            >
+              ADD NEW
+            </button>
           </div>
         </div>
       </div>
@@ -48,7 +67,7 @@ const Address = ({ setShowNewAdd, data, goPaymentAction }) => {
               <div className="addDataWrap">
                 <h3>{type ? (type === "home" ? "Home" : "Work") : otherAdd}</h3>
                 <p>
-                  {flat} {address} {landmark}
+                  {flat}, {address}, {landmark}
                 </p>
               </div>
 

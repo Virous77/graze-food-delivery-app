@@ -58,11 +58,7 @@ const HomePage = () => {
                     <MdLocationOn />
                     {shop.shopLocation}
                   </p>
-
-                  <div className="contentLine hide"></div>
                 </div>
-
-                <div className="cool hide"></div>
 
                 {quickData.length > 0 && (
                   <div className="overViewPage hide">

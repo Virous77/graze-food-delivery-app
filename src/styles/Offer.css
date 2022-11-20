@@ -1,0 +1,91 @@
+.offerPageBar {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.offerListBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.offerListBar img {
+  width: 100%;
+  height: 300px;
+  transition: ease-in-out 0.3s;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.offerList {
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.offerList img:hover {
+  scale: 1.04;
+}
+
+.offerImage {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.offerList h2 {
+  margin-top: 0.6rem;
+  text-transform: capitalize;
+  color: #282c3f;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.offerPrice {
+  display: grid;
+  grid-template-columns: 100px 40px;
+  margin-top: 1rem;
+  color: #282c3f;
+  opacity: 0.8;
+}
+
+.offerPrices {
+  display: grid;
+  grid-template-columns: 100px 40px;
+  margin-top: 0.3rem;
+  color: #282c3f;
+  opacity: 0.8;
+}
+
+.offerTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: absolute;
+  top: 3%;
+  left: 4%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4px 10px;
+  border-radius: 3px;
+  color: rgb(4, 209, 4);
+}
+
+.offerTag p {
+  font-size: 1.2rem;
+}
+
+.offerTag span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.offerTag b {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
