@@ -9,6 +9,7 @@ import { BiFoodTag } from "react-icons/bi";
 import { TiLockOpen, TiLockClosed } from "react-icons/ti";
 import FoodList from "../components/FoodList";
 import ShopHomeAction from "../components/ShopHomeAction";
+import HotelFooter from "../components/layout/HotelFooter";
 
 const HotelHomePage = () => {
   const { id } = useParams();
@@ -103,6 +104,7 @@ const HotelHomePage = () => {
           shopId={id}
         />
       </Card>
+      <HotelFooter shopData={shopData} />
     </section>
   );
 };

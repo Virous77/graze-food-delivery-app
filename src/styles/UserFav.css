@@ -21,3 +21,21 @@
   text-align: end;
   color: rgb(255, 176, 30);
 }
+
+.noBookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.noBookmark img {
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+.noBookmark p {
+  margin-top: 0.3rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}

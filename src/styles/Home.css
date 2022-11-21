@@ -188,3 +188,28 @@
 .hide {
   display: none;
 }
+
+.noHome {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeRate {
+  margin-top: 0.4rem;
+}
+
+.rate {
+  background-color: brown;
+  color: white;
+  width: fit-content;
+  padding: 2px 8px;
+}
+
+.rates {
+  background-color: rgb(0, 192, 0);
+  color: white;
+  width: fit-content;
+  padding: 2px 8px;
+}

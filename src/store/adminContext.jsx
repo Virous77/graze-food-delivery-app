@@ -94,6 +94,8 @@ export const AdminContextProvider = ({ children }) => {
       shopUserUid: user.uid,
       createdAt: serverTimestamp(),
       shopImage: imageAsset,
+      rates: 0,
+      ratesCount: 0,
     };
 
     try {

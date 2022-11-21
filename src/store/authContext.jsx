@@ -224,6 +224,7 @@ export const UserAuthContextProvider = ({ children }) => {
         setEdit,
         userData,
         fetchLoading,
+        initialState,
       }}
     >
       {children}

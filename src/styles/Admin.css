@@ -25,6 +25,7 @@
   font-size: 0.9rem;
   padding-top: 0.2rem;
   opacity: 0.8;
+  text-transform: capitalize;
 }
 
 .adminHead {
@@ -50,7 +51,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 121;
+  z-index: 521;
 }
 
 .AdminLinks {

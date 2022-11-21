@@ -6,7 +6,7 @@ import Loader from "../../components/UI/Loader";
 import order from "../../images/order.svg";
 import OrderDeatils from "../../components/OrderDeatils";
 
-const OrderHistory = () => {
+const OrderHistory = ({ setTempData: setTemp, setShowReview }) => {
   const { user } = useAuthContext();
   const { data, loading } = useFetchOrders(user.uid, "orders");
   const [showDetails, setShowDetails] = useState(false);
@@ -57,6 +57,22 @@ const OrderHistory = () => {
                 </div>
 
                 <div className="viewOrder">
+                  <button
+                    onClick={() => {
+                      const cartShop = {
+                        shopids: order?.userCartItem[0]?.shopId,
+                        shopLocations: order?.userCartItem[0]?.shopLocation,
+                        shopNames: order?.userCartItem[0]?.shopName,
+                        shopImages: order?.userCartItem[0]?.shopImage,
+                      };
+
+                      setTemp(cartShop);
+                      setShowReview(true);
+                    }}
+                  >
+                    Review
+                  </button>
+
                   <button
                     onClick={() => {
                       setShowDetails(true);

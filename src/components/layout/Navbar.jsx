@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useAuthContext } from "../../store/authContext";
@@ -6,13 +6,15 @@ import { ImProfile } from "react-icons/im";
 import { FaUser } from "react-icons/fa";
 import { MdOutlineHotelClass, MdAdminPanelSettings } from "react-icons/md";
 import { GoSearch } from "react-icons/go";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectCartItem } from "../../store/cartSlice";
+import PopUp from "./PopUp";
 
 const Navbar = () => {
-  const { user } = useAuthContext();
+  const { user, logout } = useAuthContext();
   const CartItem = useSelector(selectCartItem);
-  const dispatch = useDispatch();
+  const [show, setShow] = useState(false);
+  const path = window.location.pathname;
 
   const CurrentUserCart = CartItem.filter(
     (item) => item.orderUserId === user.uid
@@ -34,7 +36,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav>
+      <nav onMouseLeave={() => setShow(false)}>
         <div className="logo">
           <NavLink to="/">
             <h1>Graze</h1>
@@ -84,6 +86,12 @@ const Navbar = () => {
             <NavLink
               to="/profile/order-history"
               className="navLink"
+              onMouseEnter={() => {
+                setTimeout(() => {
+                  setShow(true);
+                }, 400);
+              }}
+              onClick={() => setShow(false)}
               style={({ isActive }) => (isActive ? active : notActive)}
             >
               <ImProfile className="navIcon" />
@@ -100,6 +108,8 @@ const Navbar = () => {
             Cart
           </NavLink>
         </div>
+
+        {show && path === "/" && <PopUp setShow={setShow} logout={logout} />}
       </nav>
     </header>
   );

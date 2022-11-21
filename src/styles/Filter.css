@@ -1,0 +1,119 @@
+.filterBar {
+  padding: 10px 2rem;
+  background-color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.filterAction {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 180px 1fr 20px;
+  gap: 2rem;
+}
+
+.filterIt {
+  font-size: 1.3rem;
+  color: #282c3f;
+}
+
+.filterAction h1 {
+  font-size: 1.3rem;
+  color: #282c3f;
+}
+
+.filterAction input {
+  color: #282c3f;
+  font-size: 0.9rem;
+  background-color: white;
+  width: 100%;
+  padding: 15px 10px;
+}
+
+.filterSearch {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0 15px;
+}
+
+.homeC {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.homeS {
+  font-size: 1.3rem;
+}
+
+.filterSections {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100vh;
+  width: 600px;
+  z-index: 900;
+  padding: 2rem;
+}
+
+.filterIcon {
+  cursor: pointer;
+}
+
+.filterCloseHead {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.categories h2 {
+  margin-bottom: 1rem;
+  background-color: rgb(252, 170, 17);
+  width: fit-content;
+  padding: 2px 15px;
+  color: white;
+  border-radius: 2px;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.categoryList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.cate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkIcon {
+  display: flex;
+  cursor: pointer;
+}
+
+.schemaCheck {
+  background-color: rgb(191, 191, 191);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkBar {
+  background-color: rgb(252, 172, 24);
+  color: white;
+}
+
+.hideFill {
+  display: none;
+}
+
+.cate p {
+  text-transform: capitalize;
+  font-size: 0.95rem;
+}

@@ -37,6 +37,8 @@ const ShopHomeAction = ({ search, setSearch, shop, shopId: sId }) => {
       shopType: e.shopTypeVeg,
       shopName: e.shopName,
       shopId: sId,
+      rates: e.rates,
+      ratesCount: e.ratesCount,
     };
 
     try {
