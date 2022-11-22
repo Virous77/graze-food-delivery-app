@@ -149,3 +149,16 @@
 .yesBio {
   text-transform: capitalize;
 }
+
+@media (max-width: 768px) {
+  .editProfileBar {
+    width: 70%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .editProfileBar {
+    width: 100%;
+  }
+}

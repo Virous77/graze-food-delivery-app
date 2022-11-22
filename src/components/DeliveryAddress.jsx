@@ -13,7 +13,6 @@ import Loader from "../components/UI/Loader";
 import CheckoutPayment from "./CheckoutPayment";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-
 const DeliveryAddress = ({ setThankYou }) => {
   const [showNewAdd, setShowNewAdd] = useState(false);
   const [goPayment, setGoPayment] = useState(true);

@@ -50,3 +50,28 @@
 .showSearch {
   opacity: 1;
 }
+
+@media (max-width: 1120px) {
+  .shopActionBar {
+    left: 4%;
+  }
+}
+
+@media (max-width: 620px) {
+  .shopActionBar {
+    left: 10%;
+  }
+}
+
+@media (max-width: 620px) {
+  .shopActionBar {
+    left: 6%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .search input {
+    width: 125px;
+  }
+}

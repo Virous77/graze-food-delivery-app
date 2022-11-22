@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Filter.css";
 import { BsFilter } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
@@ -8,7 +8,7 @@ const Filter = ({ data, search, setSearch, setShow }) => {
   return (
     <section className="filterBar">
       <div className="filterAction">
-        <div className="totalRes">
+        <div className="totalRes hideCounts">
           <h1>{data?.length} restaurants</h1>
         </div>
 
@@ -16,7 +16,6 @@ const Filter = ({ data, search, setSearch, setShow }) => {
           <BiSearch className="homeS" />
           <input
             type="text"
-            autoFocus
             placeholder="Search for restaurants"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

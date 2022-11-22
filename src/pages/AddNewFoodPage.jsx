@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../components/UI/Card";
 import { FaTrash } from "react-icons/fa";
 import { BsCamera } from "react-icons/bs";
 import { useAdminContext } from "../store/adminContext";
@@ -22,7 +21,7 @@ const AddNewFoodPage = () => {
   return (
     <section className="addFoodBar">
       <h1 className="head">Add Shop</h1>
-      <Card>
+      <div className="adminCardss">
         <div className="shopForm">
           <div className="heroImage">
             {imageAsset ? (
@@ -139,7 +138,7 @@ const AddNewFoodPage = () => {
             </button>
           </div>
         </div>
-      </Card>
+      </div>
     </section>
   );
 };

@@ -3,7 +3,6 @@ import "../../styles/Reviews.css";
 import review from "../../images/review.svg";
 import { useAuthContext } from "../../store/authContext";
 import useFetchReviews from "../../hooks/useFetchReviews";
-import Loader from "../../components/UI/Loader";
 import { Rating } from "react-simple-star-rating";
 import { toast } from "react-toastify";
 import { deleteDoc, doc } from "firebase/firestore";
@@ -21,7 +20,12 @@ const UserReviewList = () => {
     }
   };
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="loadingView">
+        <p>Loading...</p>
+      </div>
+    );
 
   return (
     <section className="userRevBar">

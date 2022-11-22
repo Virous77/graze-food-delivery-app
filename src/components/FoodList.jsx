@@ -45,7 +45,7 @@ const FoodList = ({ food, type, shopData, shopId: sId }) => {
 
   return (
     <section className="foodListBar">
-      <div></div>
+      <div className="hideCartItem"></div>
       {food.length > 0 ? (
         <div className="foodCard">
           {food.map((item) => (
@@ -55,6 +55,7 @@ const FoodList = ({ food, type, shopData, shopId: sId }) => {
                   <BiFoodTag className={type ? "veg" : "nonVeg"} />
                   <h3>{item.foodName}</h3>
                   <p>${item?.offer ? item.offerFoodPrice : item.foodPrice}</p>
+                  <span>{item.foodDesc}</span>
                 </div>
                 <div className="foodRight">
                   <img src={item.foodImage} alt={item.foodName} />
@@ -162,7 +163,7 @@ const FoodList = ({ food, type, shopData, shopId: sId }) => {
           <img src={notFounds} alt="Not founds" />
         </div>
       )}
-      <div>
+      <div className="hide2">
         <CartItem />
       </div>
     </section>

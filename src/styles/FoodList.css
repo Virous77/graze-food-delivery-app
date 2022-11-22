@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  gap: 2rem;
 }
 
 .foodRight {
@@ -44,6 +45,13 @@
   margin-top: 0.4rem;
 }
 
+.foodleft span {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  opacity: 0.8;
+  display: block;
+}
+
 .addFood {
   position: absolute;
   bottom: -7%;
@@ -76,4 +84,24 @@
 .notFounds img {
   width: 50%;
   height: 250px;
+}
+
+@media (max-width: 1120px) {
+  .hideCartItem {
+    display: none;
+  }
+
+  .foodListBar {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide2 {
+    display: none;
+  }
+
+  .foodListBar {
+    grid-template-columns: 1fr;
+  }
 }

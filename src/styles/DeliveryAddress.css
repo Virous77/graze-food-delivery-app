@@ -185,6 +185,7 @@
 
 .six button {
   border: 2px solid rgb(7, 211, 7);
+  color: black;
 }
 
 .showAddBar button {
@@ -380,4 +381,104 @@
   text-align: center;
   width: 50%;
   margin: auto;
+}
+
+@media (max-width: 1250px) {
+  .userAddBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1275px) {
+  .outlineBar {
+    left: -7%;
+  }
+
+  .secureBar {
+    left: -7%;
+  }
+
+  .activePay {
+    left: -7%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .outlineBar {
+    left: -9%;
+  }
+
+  .secureBar {
+    left: -9%;
+  }
+
+  .activePay {
+    left: -9%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .outlineBar {
+    left: -11%;
+  }
+
+  .secureBar {
+    left: -11%;
+  }
+
+  .activePay {
+    left: -10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .outlineBar {
+    left: -5%;
+  }
+
+  .secureBar {
+    left: -5%;
+  }
+
+  .activePay {
+    left: -5%;
+  }
+
+  .newAdd {
+    width: 60%;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .outlineBar {
+    left: 2%;
+    top: -7%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .secureBar {
+    left: 2%;
+    top: -10%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .activePay {
+    left: 2%;
+    top: -5%;
+    width: 40px;
+    height: 40px;
+  }
+  .newAdd {
+    width: 75%;
+  }
+}
+
+@media (max-width: 520px) {
+  .newAdd {
+    width: 100%;
+    padding: 1rem;
+  }
 }

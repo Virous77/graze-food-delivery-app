@@ -117,3 +117,72 @@
   text-transform: capitalize;
   font-size: 0.95rem;
 }
+
+.filterBarButton {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(250, 171, 24);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  left: 0;
+}
+
+.filterBarButton button {
+  background-color: rgb(250, 171, 24);
+  color: white;
+}
+
+.filterBarButton button:hover {
+  background-color: rgb(240, 158, 6);
+}
+
+@media (max-width: 1200px) {
+  .filterSearch {
+    width: 80%;
+  }
+}
+
+@media (max-width: 920px) {
+  .filterSearch {
+    width: 95%;
+  }
+
+  .filterAction {
+    grid-template-columns: 150px 1fr 20px;
+  }
+
+  .filterSections {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterAction {
+    grid-template-columns: 1fr 20px;
+  }
+
+  .hideCounts {
+    display: none;
+  }
+
+  .filterBar {
+    padding: 10px 1rem;
+  }
+
+  .filterSearch {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .filterSections {
+    width: 60%;
+  }
+
+  .categoryList {
+    grid-template-columns: 1fr;
+  }
+}

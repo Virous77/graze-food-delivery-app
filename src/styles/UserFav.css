@@ -39,3 +39,31 @@
   opacity: 0.8;
   font-size: 0.9rem;
 }
+
+@media (max-width: 1320px) {
+  .userBookmarkBar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1030px) {
+  .userBookmarkBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .userBookmarkBar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .userBookmarkBar {
+    grid-template-columns: 1fr;
+  }
+
+  .noBookmark p {
+    font-size: 0.75rem;
+  }
+}

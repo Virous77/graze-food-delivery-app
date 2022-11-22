@@ -101,3 +101,120 @@ nav {
 .popUp span:hover {
   color: red;
 }
+
+.mobileMenu {
+  display: none;
+}
+
+.menuIcon {
+  font-size: 1.7rem;
+}
+
+.navLinkss {
+  display: flex;
+  color: #282c3f;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.hideNav {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .navLinks {
+    gap: 2.7rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  nav {
+    padding: 1.2rem 5rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .navLinks {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 820px) {
+  nav {
+    padding: 1.2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hideMainNav {
+    display: none;
+  }
+
+  .hideNav {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .MobileMenuBar {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: white;
+    z-index: 500;
+    width: 60%;
+    padding: 1rem 2rem;
+  }
+
+  .mobileHead h1 {
+    font-size: 1.3rem;
+    color: #282c3f;
+  }
+
+  .mobileHead {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .closeMobile {
+    font-size: 1.3rem;
+  }
+
+  .lineMobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .lineMobile a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #282c3f;
+    font-size: 1.3rem;
+  }
+
+  .lineMobile p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #282c3f;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 620px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .MobileMenuBar {
+    width: 80%;
+  }
+}

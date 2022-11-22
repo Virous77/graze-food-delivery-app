@@ -6,7 +6,7 @@ const HomeFooter = () => {
   return (
     <footer className="homeFooter">
       <div className="footerCard">
-        <div className="footLogo">
+        <div className="footLogo  hideFoot">
           <h1>graze</h1>
         </div>
 
@@ -21,7 +21,7 @@ const HomeFooter = () => {
           <span>&copy; {new Date().getFullYear()} All rights reserved</span>
         </div>
 
-        <div className="footSocial">
+        <div className="footSocial  hideFoot">
           <a href="https://twitter.com/imbitcoinb" target="_blank">
             <BsTwitter />
           </a>

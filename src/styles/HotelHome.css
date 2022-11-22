@@ -2,6 +2,10 @@
   padding-top: 5rem;
 }
 
+.hotelHomeCard {
+  padding: 1rem 9rem;
+}
+
 .shopHomeWrap {
   display: flex;
   align-items: flex-start;
@@ -114,4 +118,86 @@
   flex-direction: column;
   gap: 0.15rem;
   font-weight: 100;
+}
+
+@media (max-width: 1340px) {
+  .hotelHomeCard {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopImage img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .shopHomeVegs {
+    display: none;
+  }
+
+  .shopHomeInfo {
+    padding-top: 0;
+    display: flex;
+    gap: 3rem;
+  }
+
+  .wrapHomeName h1 {
+    font-size: 1.2rem;
+  }
+
+  .wrapHomeName span {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
+
+  .wrapHomeName p {
+    font-size: 0.7rem;
+    margin-top: -0.2rem;
+  }
+
+  .shopHomeWrap {
+    gap: 1rem;
+  }
+
+  .aboutShop {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .shopHomeVeg {
+    font-size: 0.8rem;
+  }
+
+  .shopHomeVegss {
+    flex-direction: row;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .hotelHomeCard {
+    padding: 1rem;
+  }
+
+  .shopHomeInfo {
+    gap: 1rem;
+  }
+
+  .shopHomeVegss {
+    font-size: 0.7rem;
+  }
+
+  .shopHomeVeg {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .shopImage img {
+    width: 100px;
+    height: 70px;
+  }
 }

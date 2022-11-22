@@ -1,6 +1,5 @@
 import React from "react";
 import useFetchBookmark from "../../hooks/useFetchBookmark";
-import Loader from "../../components/UI/Loader";
 import { useAuthContext } from "../../store/authContext";
 import { BiFoodTag } from "react-icons/bi";
 import { MdLocationOn } from "react-icons/md";
@@ -24,7 +23,12 @@ const UserFavShop = () => {
     }
   };
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="loadingView">
+        <p>Loading...</p>
+      </div>
+    );
 
   return (
     <>

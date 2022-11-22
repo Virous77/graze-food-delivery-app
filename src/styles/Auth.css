@@ -116,3 +116,19 @@
 .googleIcon {
   font-size: 1.3rem;
 }
+
+@media (max-width: 768px) {
+  .registerBar {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 520px) {
+  .registerBar {
+    padding: 1rem;
+  }
+
+  .registerCard {
+    width: 100%;
+  }
+}

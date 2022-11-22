@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Navbar from "./components/layout/Navbar";
 import { Route, Routes } from "react-router-dom";
 import {
@@ -16,13 +17,16 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useAuthContext } from "./store/authContext";
+import MobileNavbar from "./components/layout/MobileNavbar";
 
 function App() {
+  const [showMobile, setShowMobile] = useState(false);
   const { user } = useAuthContext();
 
   return (
     <section className="App">
-      <Navbar />
+      <Navbar setShowMobile={setShowMobile} />
+      {showMobile && <MobileNavbar setShowMobile={setShowMobile} />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -32,6 +36,7 @@ function App() {
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/:name/:id" element={<HotelHomePage />} />
+
         {user.email === process.env.REACT_APP_ADMIN_ID && (
           <Route path="/admin/*" element={<AdminPage />} />
         )}

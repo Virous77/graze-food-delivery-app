@@ -262,3 +262,40 @@
   padding: 1.5rem;
   position: relative;
 }
+
+.pro {
+  background-color: rgb(250, 172, 27);
+  color: white;
+  margin-bottom: 0.5rem;
+  padding: 5px 20px;
+  width: fit-content;
+}
+
+@media (max-width: 1325px) {
+  .orderListBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1220px) {
+  .userAddHome {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderFullBar {
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .emptyOrder p {
+    font-size: 0.75rem;
+  }
+
+  .emptyOrder img {
+    width: 70%;
+  }
+}

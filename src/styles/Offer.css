@@ -3,6 +3,10 @@
   padding-bottom: 2rem;
 }
 
+.offerCardBar {
+  padding: 1rem 9rem;
+}
+
 .offerListBar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,8 +42,7 @@
   margin-top: 0.6rem;
   text-transform: capitalize;
   color: #282c3f;
-  font-size: 1.2rem;
-  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .offerPrice {
@@ -88,4 +91,44 @@
   font-weight: 400;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .offerListBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .offerListBar img {
+    height: 200px;
+  }
+
+  .offerListBar {
+    gap: 1rem;
+  }
+
+  .offerPageInfo h2 {
+    font-size: 0.9rem;
+  }
+
+  .offerPrice p,
+  .offerPrice span {
+    font-size: 0.9rem;
+  }
+
+  .offerPrice {
+    margin-top: 0.7rem;
+  }
+
+  .offerPrices p,
+  .offerPrices span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .offerListBar {
+    grid-template-columns: 1fr;
+  }
 }

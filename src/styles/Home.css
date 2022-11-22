@@ -24,6 +24,15 @@
 .contentImage img {
   width: 100%;
   height: 180px;
+  transition: ease-in-out 0.3s;
+}
+
+.contentImage img:hover {
+  scale: 1.05;
+}
+
+.contentImage {
+  overflow: hidden;
 }
 
 .veg {
@@ -212,4 +221,52 @@
   color: white;
   width: fit-content;
   padding: 2px 8px;
+}
+
+.rightConta h1 {
+  color: #282c3f;
+}
+
+.rightConta p {
+  color: #282c3f;
+}
+
+.head {
+  color: #282c3f;
+}
+
+@media (max-width: 1500px) {
+  .homeContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .homeContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 920px) {
+  .homeContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contentList:hover .hide {
+    display: none;
+  }
+
+  .overViewPage {
+    display: none;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .homeContent {
+    grid-template-columns: 1fr;
+  }
 }

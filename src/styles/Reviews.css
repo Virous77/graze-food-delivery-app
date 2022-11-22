@@ -1,7 +1,6 @@
 .reviewsBar {
   position: absolute;
   background-color: white;
-  height: 55vh;
   width: 550px;
   padding: 2rem;
   top: 50%;
@@ -106,10 +105,12 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .revEmpty img {
-  width: 15rem;
+  width: 12rem;
 }
 
 .revEmpty p {
@@ -124,4 +125,20 @@
   padding: 0;
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 1170px) {
+  .userRevListBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .reviewsBar {
+    width: 95%;
+  }
+
+  .revEmpty p {
+    font-size: 0.7rem;
+  }
 }

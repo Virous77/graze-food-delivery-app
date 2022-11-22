@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useAuthContext } from "../../store/authContext";
 import { ImProfile } from "react-icons/im";
 import { FaUser } from "react-icons/fa";
@@ -9,8 +9,9 @@ import { GoSearch } from "react-icons/go";
 import { useSelector } from "react-redux";
 import { selectCartItem } from "../../store/cartSlice";
 import PopUp from "./PopUp";
+import { TbMenu } from "react-icons/tb";
 
-const Navbar = () => {
+const Navbar = ({ setShowMobile }) => {
   const { user, logout } = useAuthContext();
   const CartItem = useSelector(selectCartItem);
   const [show, setShow] = useState(false);
@@ -44,69 +45,80 @@ const Navbar = () => {
         </div>
 
         <div className="navLinks">
-          {user.email === process.env.REACT_APP_ADMIN_ID && (
+          <div className="navLinks  hideMainNav">
+            {user.email === process.env.REACT_APP_ADMIN_ID && (
+              <NavLink
+                to="/admin/dashboard"
+                className="navLink"
+                style={({ isActive }) => (isActive ? active : notActive)}
+              >
+                <MdAdminPanelSettings className="navIcon" />
+                Admin
+              </NavLink>
+            )}
+
             <NavLink
-              to="/admin/dashboard"
+              to="/search"
               className="navLink"
               style={({ isActive }) => (isActive ? active : notActive)}
             >
-              <MdAdminPanelSettings className="navIcon" />
-              Admin
+              <GoSearch className="navIcon" />
+              Search
             </NavLink>
-          )}
 
-          <NavLink
-            to="/search"
-            className="navLink"
-            style={({ isActive }) => (isActive ? active : notActive)}
-          >
-            <GoSearch className="navIcon" />
-            Search
-          </NavLink>
-
-          <NavLink
-            to="/offers"
-            className="navLink"
-            style={({ isActive }) => (isActive ? active : notActive)}
-          >
-            <MdOutlineHotelClass className="navIcon" />
-            Offers
-          </NavLink>
-
-          {!user.isLoggedIn ? (
             <NavLink
-              to="/login"
+              to="/offers"
               className="navLink"
               style={({ isActive }) => (isActive ? active : notActive)}
             >
-              <FaUser className="navIcon" />
-              Sign In
+              <MdOutlineHotelClass className="navIcon" />
+              Offers
             </NavLink>
-          ) : (
+
+            {!user.isLoggedIn ? (
+              <NavLink
+                to="/login"
+                className="navLink"
+                style={({ isActive }) => (isActive ? active : notActive)}
+              >
+                <FaUser className="navIcon" />
+                Sign In
+              </NavLink>
+            ) : (
+              <NavLink
+                to="/profile/order-history"
+                className="navLink"
+                onMouseEnter={() => {
+                  setTimeout(() => {
+                    setShow(true);
+                  }, 400);
+                }}
+                onClick={() => setShow(false)}
+                style={({ isActive }) => (isActive ? active : notActive)}
+              >
+                <ImProfile className="navIcon" />
+                Profile
+              </NavLink>
+            )}
+
             <NavLink
-              to="/profile/order-history"
+              to="/cart"
               className="navLink"
-              onMouseEnter={() => {
-                setTimeout(() => {
-                  setShow(true);
-                }, 400);
-              }}
-              onClick={() => setShow(false)}
               style={({ isActive }) => (isActive ? active : notActive)}
             >
-              <ImProfile className="navIcon" />
-              Profile
+              <span className="cartNav">{total}</span>
+              Cart
             </NavLink>
-          )}
+          </div>
 
-          <NavLink
-            to="/cart"
-            className="navLink"
-            style={({ isActive }) => (isActive ? active : notActive)}
-          >
+          <Link to="/cart" className="navLinkss  hideNav">
             <span className="cartNav">{total}</span>
             Cart
-          </NavLink>
+          </Link>
+
+          <div className="mobileMenu">
+            <TbMenu className="menuIcon" onClick={() => setShowMobile(true)} />
+          </div>
         </div>
 
         {show && path === "/" && <PopUp setShow={setShow} logout={logout} />}

@@ -71,3 +71,35 @@
 .searchEmpty img {
   width: 15rem;
 }
+
+@media (max-width: 820px) {
+  .searchListBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .searchBar {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchInputBar {
+    padding: 1rem 1rem;
+  }
+
+  .searchInput input {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchListBar {
+    grid-template-columns: 1fr;
+  }
+
+  .searchListBar img {
+    height: 200px;
+  }
+}

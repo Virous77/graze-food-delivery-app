@@ -1,0 +1,179 @@
+.adminDashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.shopCount,
+.foodCount,
+.orderCount {
+  background-color: whitesmoke;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dash {
+  text-align: center;
+}
+
+.dashIcon {
+  font-size: 2rem;
+  color: white;
+}
+
+.dashS {
+  background-color: rgb(212, 4, 4);
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.dashF {
+  background-color: rgb(3, 206, 3);
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.dashO {
+  background-color: rgb(249, 249, 29);
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.adminDashboard p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.adminDashboard span {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.viewNav {
+  background-color: whitesmoke;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.viewNav p {
+  font-size: 1rem;
+  color: rgb(254, 174, 27);
+}
+
+.loadingView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+
+.searchShop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.searchView {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px 15px;
+  width: 60%;
+  font-size: 0.9rem;
+  border-radius: 3px;
+}
+
+.searchView input {
+  padding: 6px;
+  width: 100%;
+}
+
+.viewIcon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.topConta {
+  display: grid;
+  grid-template-columns: 20px 1fr 70px;
+  gap: 1rem;
+  background-color: #282c3f;
+  padding: 7px 10px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.bottomConta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.viewShopLists {
+  display: grid;
+  grid-template-columns: 20px 1fr 70px;
+  gap: 1rem;
+  padding: 7px 10px;
+}
+
+.viewShopList img {
+  width: 40px;
+  height: 25px;
+  border-radius: 2px;
+}
+
+.viewShopInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.viewShopInfo p {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.viewShopInfo span {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  display: block;
+}
+
+.bShopAction button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: red;
+}
+
+@media (max-width: 620px) {
+  .adminDashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .searchView {
+    width: 85%;
+  }
+}

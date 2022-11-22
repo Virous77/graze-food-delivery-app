@@ -129,3 +129,20 @@
   margin-top: 2rem;
   padding: 15px 30px;
 }
+
+@media (max-width: 992px) {
+  .cartBar {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartBar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wcartEmpty img {
+    width: 95%;
+  }
+}

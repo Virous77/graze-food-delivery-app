@@ -1,3 +1,21 @@
 .cardBar {
   padding: 1rem 9rem;
 }
+
+@media (max-width: 1050px) {
+  .cardBar {
+    padding: 1rem 5rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .cardBar {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .cardBar {
+    padding: 1rem;
+  }
+}

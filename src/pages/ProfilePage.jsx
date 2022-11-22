@@ -99,7 +99,7 @@ const ProfilePage = () => {
           <div className="adminContent">
             <Routes>
               <Route
-                path="order-history"
+                path="/order-history"
                 element={
                   <OrderHistory
                     setTempData={setTempData}
@@ -107,9 +107,9 @@ const ProfilePage = () => {
                   />
                 }
               />
-              <Route path="address-home" element={<UserAddressHome />} />
-              <Route path="favourites" element={<UserFavShop />} />
-              <Route path="reviews" element={<UserReviewList />} />
+              <Route path="/address-home" element={<UserAddressHome />} />
+              <Route path="/favourites" element={<UserFavShop />} />
+              <Route path="/reviews" element={<UserReviewList />} />
             </Routes>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/CartItem.css";
 import { BiFoodTag } from "react-icons/bi";
 import empty from "../images/emptycart.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CartItem = () => {
   const cartItem = useSelector(selectCartItem);

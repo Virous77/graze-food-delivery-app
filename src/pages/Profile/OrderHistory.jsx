@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../../styles/Profile.css";
 import { useAuthContext } from "../../store/authContext";
 import useFetchOrders from "../../hooks/useFetchOrders";
-import Loader from "../../components/UI/Loader";
 import order from "../../images/order.svg";
 import OrderDeatils from "../../components/OrderDeatils";
 
@@ -12,7 +11,12 @@ const OrderHistory = ({ setTempData: setTemp, setShowReview }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [tempData, setTempData] = useState("");
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="loadingView">
+        <p>Loading...</p>
+      </div>
+    );
 
   return (
     <section className="orderHistoryBar">

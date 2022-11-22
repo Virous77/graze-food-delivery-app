@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../../store/authContext";
 import useFetchAddress from "../../hooks/useFetchAddress";
-import Loader from "../../components/UI/Loader";
 import { MdOutlineShareLocation, MdWork } from "react-icons/md";
 import { BiHomeSmile } from "react-icons/bi";
 import { toast } from "react-toastify";
@@ -9,7 +8,6 @@ import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase/firebase.config";
 import EditAddress from "../../components/EditAddress";
 import addressImg from "../../images/address.svg";
-import { Link } from "react-router-dom";
 
 const UserAddressHome = () => {
   const { user } = useAuthContext();
@@ -25,7 +23,12 @@ const UserAddressHome = () => {
     }
   };
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="loadingView">
+        <p>Loading...</p>
+      </div>
+    );
 
   return (
     <>

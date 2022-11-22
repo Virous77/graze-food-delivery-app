@@ -45,6 +45,10 @@ const FilterBar = ({ setShow, Categories, fill, setFill }) => {
               </div>
             ))}
           </div>
+
+          <div className="filterBarButton">
+            <button onClick={() => setFill("")}>CLEAR FILTER</button>
+          </div>
         </div>
       </div>
     </>

@@ -192,9 +192,9 @@ export const UserAuthContextProvider = ({ children }) => {
   const logout = async () => {
     try {
       await signOut(auth);
+      setUser(initialState);
       localStorage.removeItem("coinsmap");
       navigate("/");
-      setUser(initialState);
     } catch (error) {
       toast.error("Something went wrong, Try again!");
     }

@@ -43,3 +43,16 @@
 .thankYouAction button:hover {
   background-color: #31364d;
 }
+
+@media (max-width: 640px) {
+  .thankYouBar {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankYouAction {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}

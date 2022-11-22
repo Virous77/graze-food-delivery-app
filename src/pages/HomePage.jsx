@@ -57,81 +57,84 @@ const HomePage = () => {
                   res.shopCategory.toLowerCase().includes(search.toLowerCase())
               )
               .map((shop) => (
-                <div
-                  className="contentList"
-                  key={shop.id}
-                  onMouseEnter={() => {
-                    fetchQuickData(shop.id);
-                  }}
-                >
-                  <div className="contentImage">
-                    <img src={shop.shopImage} alt={shop.shopName} />
-                  </div>
-                  <div className="shopInfo">
-                    <h1>{shop.shopName}</h1>
-                    <span>
-                      <BiFoodTag
-                        className={shop.shopTypeVeg ? "veg" : "nonVeg"}
-                      />
-                      {shop.shopCategory}
-                    </span>
-
-                    <p>
-                      <MdLocationOn />
-                      {shop.shopLocation}
-                    </p>
-
-                    <div className="homeRate">
-                      {shop.rates > 0 ? (
-                        <span
-                          className={
-                            shop.rates / shop.ratesCount > 3 ? "rates" : "rate"
-                          }
-                        >
-                          <HiOutlineStar />
-                          {shop.rates / shop.ratesCount}
-                        </span>
-                      ) : (
-                        <span>
-                          <HiOutlineStar />
-                          --
-                        </span>
-                      )}
+                <Link to={`/${shop.shopName}/${shop.id}`} key={shop.id}>
+                  <div
+                    className="contentList"
+                    onMouseEnter={() => {
+                      fetchQuickData(shop.id);
+                    }}
+                  >
+                    <div className="contentImage">
+                      <img src={shop.shopImage} alt={shop.shopName} />
                     </div>
-                  </div>
+                    <div className="shopInfo">
+                      <h1>{shop.shopName}</h1>
+                      <span>
+                        <BiFoodTag
+                          className={shop.shopTypeVeg ? "veg" : "nonVeg"}
+                        />
+                        {shop.shopCategory}
+                      </span>
 
-                  {quickData.length > 0 && (
-                    <div className="overViewPage hide">
-                      <div className="wrapOverView">
-                        <div className="rightConta">
-                          <h1>MENU</h1>
+                      <p>
+                        <MdLocationOn />
+                        {shop.shopLocation}
+                      </p>
 
-                          <div className="head">
-                            <GiButterflyFlower />
-                            <GiButterflyFlower />
-                          </div>
+                      <div className="homeRate">
+                        {shop.rates > 0 ? (
+                          <span
+                            className={
+                              shop.rates / shop.ratesCount > 3
+                                ? "rates"
+                                : "rate"
+                            }
+                          >
+                            <HiOutlineStar />
+                            {shop.rates / shop.ratesCount}
+                          </span>
+                        ) : (
+                          <span>
+                            <HiOutlineStar />
+                            --
+                          </span>
+                        )}
+                      </div>
+                    </div>
 
-                          <div className="quickFoodBar">
-                            {quickData?.slice(0, 6)?.map((data) => (
-                              <div className="quickFoodList" key={data.id}>
-                                <div className="quickImg">
-                                  <img src={data.foodImage} alt="" />
+                    {quickData.length > 0 && (
+                      <div className="overViewPage hide">
+                        <div className="wrapOverView">
+                          <div className="rightConta">
+                            <h1>MENU</h1>
+
+                            <div className="head">
+                              <GiButterflyFlower />
+                              <GiButterflyFlower />
+                            </div>
+
+                            <div className="quickFoodBar">
+                              {quickData?.slice(0, 6)?.map((data) => (
+                                <div className="quickFoodList" key={data.id}>
+                                  <div className="quickImg">
+                                    <img src={data.foodImage} alt="" />
+                                  </div>
+                                  <p>{data.foodName?.substring(0, 14)}...</p>
                                 </div>
-                                <p>{data.foodName?.substring(0, 14)}...</p>
-                              </div>
-                            ))}
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="quick">
-                        <Link to={`/${shop.shopName}/${shop.id}`}>
-                          <button>{shop.shopName} Home</button>
-                        </Link>
+                        <div className="quick">
+                          <Link to={`/${shop.shopName}/${shop.id}`}>
+                            <button>{shop.shopName} Home</button>
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
+                    )}
+                  </div>
+                </Link>
               ))}
           </div>
         </div>

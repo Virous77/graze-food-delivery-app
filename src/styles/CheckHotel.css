@@ -42,3 +42,19 @@
   padding: 14px 0;
   color: white;
 }
+
+@media (max-width: 560px) {
+  .checkHotelBar {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .second,
+  .first {
+    font-size: 0.7rem;
+  }
+
+  .checkHotelBar p {
+    font-size: 0.7rem;
+  }
+}

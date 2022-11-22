@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import useFetchCollection from "../hooks/useFetchCollection";
 import useFetchUser from "../hooks/useFetchUser";
 import Loader from "../components/UI/Loader";
-import Card from "../components/UI/Card";
 import { BiFoodTag } from "react-icons/bi";
 import { TiLockOpen, TiLockClosed } from "react-icons/ti";
 import FoodList from "../components/FoodList";
@@ -39,7 +38,7 @@ const HotelHomePage = () => {
           position: "relative",
         }}
       >
-        <Card>
+        <div className="hotelHomeCard">
           <div className="shopHomeWrap">
             <div className="shopImage">
               <img src={shopData?.shopImage} alt={shopData?.shopName} />
@@ -91,10 +90,10 @@ const HotelHomePage = () => {
               />
             </div>
           </div>
-        </Card>
+        </div>
       </div>
 
-      <Card>
+      <div className="hotelHomeCard">
         <FoodList
           food={uniqueFood.filter((food) =>
             food.foodName?.toLowerCase()?.includes(search?.toLowerCase())
@@ -103,7 +102,7 @@ const HotelHomePage = () => {
           shopData={shopData}
           shopId={id}
         />
-      </Card>
+      </div>
       <HotelFooter shopData={shopData} />
     </section>
   );

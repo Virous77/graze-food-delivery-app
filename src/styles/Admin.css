@@ -63,6 +63,10 @@
   gap: 2rem;
 }
 
+.adminCardss {
+  padding: 1rem 9rem;
+}
+
 .adminNav {
   background-color: whitesmoke;
   padding-left: 20px;
@@ -77,4 +81,62 @@
 
 .adminContent {
   padding: 1rem;
+}
+
+@media (max-width: 1250px) {
+  .adminCardss {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .adminContent {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .AdminLinks {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .AdminLinks {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .adminNav {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+
+  .adminNav::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  .adminNav a {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .adminInfo img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .adminInfo h1 {
+    font-size: 1.3rem;
+  }
+
+  .adminInfo p {
+    font-size: 0.75rem;
+  }
+
+  .editAdmin {
+    font-size: 0.9rem;
+  }
 }
