@@ -91,7 +91,7 @@ const HomePage = () => {
                             }
                           >
                             <HiOutlineStar />
-                            {shop.rates / shop.ratesCount}
+                            {(shop.rates / shop.ratesCount)?.toFixed(2)}
                           </span>
                         ) : (
                           <span>
