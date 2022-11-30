@@ -38,7 +38,7 @@ const CheckoutPayment = ({ tempAdd, setThankYou }) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:4242/create-payment-intent", {
+    fetch("https://graze-food-app.onrender.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
